@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<script type="text/javascript" src="codigo.js"></script>
 </head>
 <body>
@@ -10,47 +11,30 @@
 	<div>
 		<p>Primer Corte</p>
 		<input type="number" id="primerCorte">
-		<p>Peso porcentual</p>
-		<input type="number" id="primerPorcentaje">
-		<p id="primerTexto">Nota: </p>
-		<input type="button" id="primerBoton" value="Ok">
 	</div>
 	<div>
 		<p>Segundo Corte</p>
 		<input type="number" id="segundoCorte">
-		<p>Peso porcentual</p>
-		<input type="number" id="segundoPorcentaje">
-		<p id="segundoTexto">Nota: </p>
-		<input type="button" id="segundoBoton" value="Ok">
 	</div>
 	<div>
 		<p>Tercer Corte</p>
 		<input type="number" id="tercerCorte">
-		<p>Peso porcentual</p>
-		<input type="number" id="tercerPorcentaje">
-		<p id="tercerTexto">Nota: </p>
-		<input type="button" id="tercerBoton" value="Ok">
 	</div>
 	<div>
 		<p>Autoevaluacion</p>
 		<input type="number" id="cuartoCorte">
-		<p>Peso porcentual</p>
-		<input type="number" id="cuartoPorcentaje">
-		<p id="cuartoTexto">Nota: </p>
-		<input type="button" id="cuartoBoton" value="Ok">
 	</div>
 	<div>
 		<p>Coevaluacion</p>
 		<input type="number" id="quintoCorte">
-		<p>Peso porcentual</p>
-		<input type="number" id="quintoPorcentaje">
-		<p id="quintoTexto">Nota: </p>
-		<input type="button" id="quintoBoton" value="Ok">
+
 	</div>
 	<div>
-		<input type="button" id="botonTotal" value="Total">
+		<input type="button" id="botonTotal" class="button" value="Total">
+		<input type="button" id="botonLimpiar" class="button" value="Limpiar">
 		<p id="textoTotal">Su nota es de: </p>
 	</div>
+
 	<script>
 		inicio();
 	</script>

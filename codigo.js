@@ -1,81 +1,40 @@
 
 function inicio(){
-	var primerCorte, segundoCorte, tercerCorte, cuartoCorte, quintoCorte, primerPorcentaje, segundoPorcentaje, tercerPorcentaje, cuartoPorcentaje, quintoPorcentaje;
-	var primerTotal, segundoTotal, tercerTotal, cuartoTotal, quintoTotal;
-	;
-function Calcular1() {
-  primerCorte = document.getElementById("primerCorte");
-  primerCorte = Number(primerCorte.value);
-  primerPorcentaje = document.getElementById("primerPorcentaje");
-  primerPorcentaje = Number(primerPorcentaje.value);
-  primerTexto = document.getElementById("primerTexto");
-  primerTotal= primerCorte*primerPorcentaje;
-  primerTexto.innerHTML+=primerTotal;
-}
-
-function Calcular2() {
-  segundoCorte = document.getElementById("segundoCorte");
-  segundoCorte = Number(segundoCorte.value);
-  segundoPorcentaje = document.getElementById("segundoPorcentaje");
-  segundoPorcentaje = Number(segundoPorcentaje.value);
-  segundoTexto = document.getElementById("segundoTexto");
-  segundoTotal= segundoCorte*segundoPorcentaje;
-  segundoTexto.innerHTML+=segundoTotal;
-}
-
-function Calcular3() {
-  tercerCorte = document.getElementById("tercerCorte");
-  tercerCorte = Number(tercerCorte.value);
-  tercerPorcentaje = document.getElementById("tercerPorcentaje");
-  tercerPorcentaje = Number(tercerPorcentaje.value);
-  tercerTexto = document.getElementById("tercerTexto");
-  tercerTotal= tercerCorte*tercerPorcentaje;
-  tercerTexto.innerHTML+=tercerTotal;
-}
-
-function CalcularAuto() {
-  cuartoCorte = document.getElementById("cuartoCorte");
-  cuartoCorte = Number(cuartoCorte.value);
-  cuartoPorcentaje = document.getElementById("cuartoPorcentaje");
-  cuartoPorcentaje = Number(cuartoPorcentaje.value);
-  cuartoTexto = document.getElementById("cuartoTexto");
-  cuartoTotal= cuartoCorte*cuartoPorcentaje;
-  cuartoTexto.innerHTML+=cuartoTotal;
-}
-
-function CalcularCoe() {
-  quintoCorte = document.getElementById("quintoCorte");
-  quintoCorte = Number(quintoCorte.value);
-  quintoPorcentaje = document.getElementById("quintoPorcentaje");
-  quintoPorcentaje = Number(quintoPorcentaje.value);
-  quintoTexto = document.getElementById("quintoTexto");
-  quintoTotal= quintoCorte*quintoPorcentaje;
-  quintoTexto.innerHTML+=quintoTotal;
-}
-
-function Total(){
-
-	var total = primerTotal+segundoTotal+tercerTotal+cuartoTotal+quintoTotal;
-	var textoTotal = document.getElementById("textoTotal");
-	textoTotal.innerHTML+=total;
-}
-
-
-
-function Load() { 
-  var primerBoton = document.getElementById("primerBoton"); 
-  primerBoton.addEventListener("click", Calcular1, false); 
-  var segundoBoton = document.getElementById("segundoBoton"); 
-  segundoBoton.addEventListener("click", Calcular2, false);
-  var tercerBoton = document.getElementById("tercerBoton"); 
-  tercerBoton.addEventListener("click", Calcular3, false);
-  var cuartoBoton = document.getElementById("cuartoBoton"); 
-  cuartoBoton.addEventListener("click", CalcularAuto, false);
-  var quintoBoton = document.getElementById("quintoBoton"); 
-  quintoBoton.addEventListener("click", CalcularCoe, false);
   var botonTotal = document.getElementById("botonTotal");
-  botonTotal.addEventListener("click", Total, false)
-} 
+  botonTotal.addEventListener("click", Calcular)
+  var botonLimpiar = document.getElementById("botonLimpiar");
+  botonLimpiar.addEventListener("click", Limpiar)
+}
 
-document.addEventListener("DOMContentLoaded", Load, false);
+function Calcular() {
+  var primerCorte = document.getElementById("primerCorte");
+  primerCorte = (Number(primerCorte.value))*0.24;
+  var segundoCorte = document.getElementById("segundoCorte");
+  segundoCorte = (Number(segundoCorte.value))*0.24;
+  var tercerCorte = document.getElementById("tercerCorte");
+  tercerCorte = (Number(tercerCorte.value))*0.32;
+  var cuartoCorte = document.getElementById("cuartoCorte");
+  cuartoCorte = (Number(cuartoCorte.value))*0.1;
+  var quintoCorte = document.getElementById("quintoCorte");
+  quintoCorte = (Number(quintoCorte.value))*0.1;
+  var total = primerCorte+segundoCorte+tercerCorte+cuartoCorte+quintoCorte;
+  var textoTotal = document.getElementById("textoTotal");
+  textoTotal.innerHTML+=total;
+}
+
+function Limpiar(){
+  var primerCorte = document.getElementById("primerCorte");
+  primerCorte.value = "";
+  var segundoCorte = document.getElementById("segundoCorte");
+  segundoCorte.value = "";
+  var tercerCorte = document.getElementById("tercerCorte");
+  tercerCorte.value = "";
+  var cuartoCorte = document.getElementById("cuartoCorte");
+  cuartoCorte.value = "";
+  var quintoCorte = document.getElementById("quintoCorte");
+  quintoCorte.value = "";
+  var textoTotal = document.getElementById("textoTotal");
+  textoTotal.innerHTML="Su nota es de:"
+
+
 }
